@@ -19,16 +19,29 @@ body {
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  max-width: 320px;
+  max-width: 330px;
 }
 
-.foto {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+.carousel {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto 20px;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
   border: 4px solid #ff6b81;
-  margin-bottom: 20px;
+}
+
+.carousel img.active {
+  opacity: 1;
 }
 
 h1 {

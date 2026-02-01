@@ -8,25 +8,41 @@
 </head>
 <body>
   <div class="container">
+
     <div class="carousel">
-      <img src="foto1.jpg" class="active">
-      <img src="foto2.jpg">
-      <img src="foto3.jpg">
-      <img src="foto4.jpg">
-      <img src="foto5.jpg">
+      <img src="foto1.jpeg" class="active">
+      <img src="foto2.jpeg">
+      <img src="foto3.jpeg">
+      <img src="foto4.jpeg">
+      <img src="foto5.jpeg">
     </div>
 
     <h1>Amor, te amo &lt;3</h1>
-    <p>Cada momento com você vira memória boa.</p>
+    <p id="frase">Tudo fica melhor quando é com você.</p>
+
   </div>
 
   <script>
     const fotos = document.querySelectorAll('.carousel img');
+    const frase = document.getElementById('frase');
+
+    const frases = [
+      "Tudo fica melhor quando é com você.",
+      "Cada momento ao seu lado vira memória boa.",
+      "Seu sorriso é meu lugar favorito.",
+      "Com você, até o simples vira especial.",
+      "Te amo hoje, amanhã e sempre ❤️"
+    ];
+
     let atual = 0;
 
     setInterval(() => {
       fotos[atual].classList.remove('active');
       atual = (atual + 1) % fotos.length;
       fotos[atual].classList.add('active');
+      frase.textContent = frases[atual];
     }, 3000);
-  </
+  </script>
+
+</body>
+</html>

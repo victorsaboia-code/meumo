@@ -8,9 +8,25 @@
 </head>
 <body>
   <div class="container">
-    <img src="foto.jpg" alt="Minha pessoa favorita ❤️" class="foto">
+    <div class="carousel">
+      <img src="foto1.jpg" class="active">
+      <img src="foto2.jpg">
+      <img src="foto3.jpg">
+      <img src="foto4.jpg">
+      <img src="foto5.jpg">
+    </div>
+
     <h1>Amor, te amo &lt;3</h1>
-    <p>Você deixa meus dias mais leves só por existir.</p>
+    <p>Cada momento com você vira memória boa.</p>
   </div>
-</body>
-</html>
+
+  <script>
+    const fotos = document.querySelectorAll('.carousel img');
+    let atual = 0;
+
+    setInterval(() => {
+      fotos[atual].classList.remove('active');
+      atual = (atual + 1) % fotos.length;
+      fotos[atual].classList.add('active');
+    }, 3000);
+  </
